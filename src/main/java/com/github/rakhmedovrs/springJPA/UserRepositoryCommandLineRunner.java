@@ -26,5 +26,8 @@ public class UserRepositoryCommandLineRunner implements CommandLineRunner
 		User user = new User("Ivan", "Admin");
 		userRepository.save(user);
 		LOGGER.info("New user is created " + user);
+		LOGGER.info("User is found " + userRepository.findById(1L));
+		LOGGER.info("User is found " + userRepository.findById(2L));
+		LOGGER.info("Users are found " + userRepository.findAll());
 	}
 }
